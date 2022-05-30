@@ -11,7 +11,21 @@ from random import randint
 class FamilyStructure: #DEFINIMOS LA CLASE FAMILIA CON SU ESTRUCTURA
     def __init__(self,last_name):      
         self.last_name = last_name
-        self._members = []
+
+        self._members = [
+            {"id": self._generateId()        
+            "nombre": "Jane",
+            "edad" 35,
+            "suerte": [10, 14, 3]},
+            {"id": self._generateId()        
+            "nombre": "John",
+            "edad" 33,
+            "suerte": [7, 13, 22]},
+            {"id": self._generateId()        
+            "nombre": "Jimmy",
+            "edad" 5,
+            "suerte": [1]}
+        ]
         # example list of members
     # read-only: Use this method to generate random members ID's when adding members into the list
     def _generateId(self):
@@ -25,6 +39,7 @@ class FamilyStructure: #DEFINIMOS LA CLASE FAMILIA CON SU ESTRUCTURA
        member['id'] = self._generateId()
        self._members.append(member)
        print(member)
+       return self.member
         
     def delete_member(self, id):
         # fill this method and update the return
@@ -37,6 +52,9 @@ class FamilyStructure: #DEFINIMOS LA CLASE FAMILIA CON SU ESTRUCTURA
                 self._members.pop(indice)
                 print(self._members)
         return self._members
+
+
+
 
 
     def get_member(self, id):
